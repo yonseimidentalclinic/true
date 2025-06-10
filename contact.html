@@ -3,147 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>오시는길 - 연세미치과</title>
+    <title>오시는 길 - 연세미치과</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
     </head>
 <body>
-    <header>
-        <div class="container">
-             <h1><a href="index.html"><img src="images/logo.png" alt="연세미치과 로고"></a></h1>
-            <nav>
-                 <button class="mobile-menu-toggle" aria-label="메뉴 토글">☰</button>
+    <header class="site-header">
+         <div class="container header-container">
+             <div class="logo">
+                  <a href="index.html" class="text-logo">연세미치과</a>
+             </div>
+             <nav class="main-navigation">
+                 <button class="mobile-menu-toggle" aria-label="메뉴 열기"><span class="toggle-icon"></span></button>
                  <ul class="main-nav">
-                    <li><a href="index.html">홈</a></li>
-                    <li><a href="about.html">병원소개</a></li>
-                    <li><a href="services.html">진료안내</a></li>
-                    <li><a href="appointment.html">온라인예약</a></li>
-                    <li><a href="contact.html" class="active">오시는길</a></li>
-                </ul>
-            </nav>
-            <div class="header-contact">
-                <a href="tel:031-905-7285">진료문의: 031-905-7285</a>
-            </div>
-        </div>
+                     <li><a href="index.html">홈</a></li>
+                     <li><a href="about.html">병원소개</a></li>
+                     <li><a href="services.html">진료안내</a></li>
+                     <li><a href="appointment.html">온라인예약</a></li>
+                     <li><a href="contact.html" class="active">오시는길</a></li>
+                 </ul>
+             </nav>
+             <div class="header-actions">
+                 <a href="tel:031-905-7285" class="header-phone">031-905-7285</a>
+                 <a href="appointment.html" class="btn btn-outline header-appt-btn">예약하기</a>
+             </div>
+         </div>
     </header>
 
-    <main class="container page-content">
-        <section class="page-title">
-            <h2>오시는 길 / 문의</h2>
-            <p>연세미치과에 오시는 방법을 안내해 드립니다.</p>
-        </section>
+    <main class="site-content">
+         <section class="page-header section-padding">
+             <div class="container">
+                 <h1 class="page-title text-center">오시는 길</h1>
+                 <p class="page-description text-center">연세미치과를 찾아주셔서 감사합니다. 아래 약도를 참고해주세요.</p>
+             </div>
+         </section>
 
-        <section class="map-section">
-            <h3>위치 안내</h3>
-            <div id="map" style="width:100%;height:400px; background:#e0e0e0; border-radius: 8px; display:flex; align-items:center; justify-content:center; text-align:center; color:#777; font-size: 1.1em;">
-                <span>지도 로딩 중...<br>(API 키 및 좌표 설정 필요: 남정씨티프라자)</span>
-            </div>
-        </section>
-
-        <section class="contact-info-grid">
-            <div class="info-item">
-                <h3><i class="icon-address"></i> 주소</h3>
-                <p>경기도 고양시 일산동구 일산로 46</p>
-                <p><strong>남정씨티프라자 4층</strong></p>
-                <p>(3호선 백석역 1번 출구 바로 앞)</p>
-            </div>
-            <div class="info-item">
-                <h3><i class="icon-phone"></i> 전화번호</h3>
-                <p><a href="tel:031-905-7285">031-905-7285</a></p>
-                <p>(예약 및 상담 문의)</p>
-            </div>
-             <div class="info-item">
-                <h3><i class="icon-subway"></i> 대중교통</h3>
-                <p><strong>지하철:</strong> 3호선 백석역 1번 출구 바로 앞 건물 4층</p>
-                <p><strong>버스:</strong> 백석역 정류장 하차<br>(일반, 광역, M버스 노선 다수 - 예: 88A, 1000, M7106 등)</p>
-            </div>
-             <div class="info-item">
-                <h3><i class="icon-parking"></i> 주차안내</h3>
-                <p><strong>건물 내 지하주차장 이용 가능</strong></p>
-                <p>(진료 시간만큼 주차 지원)</p>
-                <p>(만차 시 외부 주차장 안내)</p>
+        <section class="map-view-section">
+            <div id="daum-map-container">
+                <div id="map-loading-indicator">지도를 불러오는 중입니다...</div>
             </div>
         </section>
 
-        <section class="opening-hours">
-            <h3>진료 시간</h3>
-            <table>
-                <tr><th>평일</th><td>오전 10:00 ~ 오후 6:30</td></tr>
-                <tr><th>토요일</th><td>오전 10:00 ~ 오후 2:00 (점심시간 없음)</td></tr>
-                <tr><th>점심시간</th><td>오후 1:00 ~ 오후 2:00 (평일)</td></tr>
-                <tr><th>휴진</th><td>일요일, 공휴일</td></tr>
-            </table>
+        <section class="contact-info-section section-padding">
+            <div class="container">
+                 <h2 class="section-title text-center">상세 정보</h2>
+                <div class="contact-info-grid">
+                    <div class="info-card">
+                         <div class="info-icon">📍</div> <h4>주소</h4>
+                         <p>경기도 고양시 일산동구 일산로 46,<br>남정씨티프라자 4층<br>(백석역 1번 출구 앞)</p>
+                    </div>
+                    <div class="info-card">
+                         <div class="info-icon">📞</div>
+                         <h4>전화</h4>
+                         <p><a href="tel:031-905-7285" class="tel-link">031-905-7285</a><br>(예약/상담 문의)</p>
+                    </div>
+                    <div class="info-card">
+                         <div class="info-icon">🚇🚌</div> <h4>대중교통</h4>
+                         <p><b>지하철:</b> 3호선 백석역 1번 출구<br><b>버스:</b> 백석역 정류장 하차</p>
+                    </div>
+                    <div class="info-card">
+                         <div class="info-icon">🚗</div>
+                         <h4>주차</h4>
+                         <p>건물 내 지하주차장 이용<br>(진료 시 주차 지원)</p>
+                    </div>
+                </div>
+            </div>
         </section>
+
+         <section class="hours-info-section section-padding bg-light">
+             <div class="container">
+                 <h2 class="section-title text-center">진료 시간 안내</h2>
+                 <div class="hours-wrapper">
+                     <table class="hours-table">
+                         <tr><th>평일</th><td>10:00 - 18:30</td></tr>
+                         <tr><th>토요일</th><td>10:00 - 14:00 <span>(점심시간 없음)</span></td></tr>
+                         <tr><th>점심시간</th><td>13:00 - 14:00 <span>(평일)</span></td></tr>
+                         <tr><th>휴진</th><td>일요일 · 공휴일</td></tr>
+                     </table>
+                     <p class="hours-note">※ 예약제로 운영되오니, 방문 전 꼭 예약 부탁드립니다.</p>
+                 </div>
+             </div>
+         </section>
 
     </main>
 
-    <footer>
-        <div class="container">
-             <div class="footer-info">
-                 <p>연세미치과 | 대표원장: 박건현 | 사업자등록번호: 119-90-23119</p>
-                 <p>주소: 경기도 고양시 일산동구 일산로 46, 남정씨티프라자 4층 (백석역 1번 출구 앞) | 전화: <a href="tel:031-905-7285">031-905-7285</a></p>
-                 <p>진료시간: 평일 10:00~18:30 (점심 13:00~14:00) / 토요일 10:00~14:00 / 일요일, 공휴일 휴진</p>
+    <footer class="site-footer">
+         <div class="container">
+             <div class="footer-grid">
+                 <div class="footer-column footer-about">
+                      <a href="index.html" class="text-logo footer-logo-text">연세미치과</a>
+                     <p>연세미치과는 편안하고 믿을 수 있는 진료를 위해 항상 노력합니다.</p>
+                 </div>
+                 <div class="footer-column footer-contact">
+                     <h4>Contact Us</h4>
+                     <p>경기도 고양시 일산동구 일산로 46, 남정씨티프라자 4층 (백석역 1번 출구 앞)</p>
+                     <p>Tel: <a href="tel:031-905-7285">031-905-7285</a></p>
+                     <p>사업자등록번호: 119-90-23119</p>
+                 </div>
+                 <div class="footer-column footer-hours">
+                     <h4>진료 시간</h4>
+                     <p>평일: 10:00 - 18:30<br>(점심: 13:00 - 14:00)</p>
+                     <p>토요일: 10:00 - 14:00</p>
+                     <p>일요일/공휴일: 휴진</p>
+                 </div>
+                  <div class="footer-column footer-quicklinks">
+                     <h4>바로가기</h4>
+                     <ul>
+                         <li><a href="about.html">병원소개</a></li>
+                         <li><a href="services.html">진료안내</a></li>
+                         <li><a href="appointment.html">온라인예약</a></li>
+                         <li><a href="contact.html">오시는길</a></li>
+                     </ul>
+                 </div>
              </div>
-             <div class="copyright">
-                 <p>&copy; 2025 Yonsei Mi Dental Clinic. All Rights Reserved.</p>
+             <div class="footer-bottom">
+                 <p>&copy; 2025 연세미치과. All Rights Reserved.</p>
+                 <p><a href="#privacy">개인정보처리방침</a> | <a href="#terms">이용약관</a></p>
              </div>
-        </div>
+         </div>
     </footer>
 
     <script src="js/script.js"></script>
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=YOUR_APP_KEY&autoload=false"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=YOUR_APP_KEY&libraries=services&autoload=false"></script>
     <script>
-        try { // 카카오맵 API 로드를 시도합니다. 실제 사용 시 YOUR_APP_KEY를 발급받은 키로 변경하세요.
-            kakao.maps.load(function() {
-                const mapContainer = document.getElementById('map');
-                if (!mapContainer) {
-                    console.error("Map container not found.");
-                    return;
-                }
+         try {
+             kakao.maps.load(function() {
+                 const mapContainer = document.getElementById('daum-map-container'); // 컨테이너 ID 확인
+                 if (!mapContainer) return;
+                 const mapElement = document.createElement('div');
+                 mapElement.setAttribute('id', 'map');
+                 mapElement.style.width = '100%'; mapElement.style.height = '100%';
+                 mapContainer.innerHTML = '';
+                 mapContainer.appendChild(mapElement);
 
-                // 남정씨티프라자 (백석역 1번 출구 부근) 좌표 예시 (정확한 좌표는 재확인 권장)
-                const clinicPosition = new kakao.maps.LatLng(37.6435, 126.7890); // 예시 좌표, 실제 좌표로 변경!
+                 // ★★★ 실제 좌표로 꼭 변경하세요! (남정씨티프라자) ★★★
+                 const clinicPosition = new kakao.maps.LatLng(37.64351, 126.78902);
 
-                const mapOption = {
-                    center: clinicPosition,
-                    level: 3
-                };
-                const map = new kakao.maps.Map(mapContainer, mapOption);
-                const marker = new kakao.maps.Marker({ position: clinicPosition });
-                marker.setMap(map);
+                 const mapOption = { center: clinicPosition, level: 3 }; // 레벨 조정
+                 const map = new kakao.maps.Map(mapElement, mapOption);
+                 const marker = new kakao.maps.Marker({ position: clinicPosition });
+                 marker.setMap(map);
 
-                const iwContent = `<div style="padding:7px 10px;min-width:150px;font-size:13px;text-align:center;"><strong>연세미치과</strong><br>(남정씨티프라자 4F)<br><a href="https://map.kakao.com/link/map/연세미치과,${clinicPosition.getLat()},${clinicPosition.getLng()}" style="color:#c87fAf" target="_blank">큰지도</a> <a href="https://map.kakao.com/link/to/연세미치과,${clinicPosition.getLat()},${clinicPosition.getLng()}" style="color:#c87fAf" target="_blank">길찾기</a></div>`;
-                const infowindow = new kakao.maps.InfoWindow({
-                    content : iwContent,
-                    removable : true
-                });
+                 const iwContent = `<div style="padding:8px 12px;min-width:180px;font-size:13px;line-height:1.5;text-align:center;border-radius:5px;">` +
+                                     `<strong style="font-size:14px;color:#48b0ab;">연세미치과</strong><br>` +
+                                     `남정씨티프라자 4층<br>` +
+                                     `<a href="https://map.kakao.com/link/map/연세미치과,${clinicPosition.getLat()},${clinicPosition.getLng()}" target="_blank" style="color:#666;font-size:12px;margin-right:5px;">큰 지도</a>` +
+                                     `<a href="https://map.kakao.com/link/to/연세미치과,${clinicPosition.getLat()},${clinicPosition.getLng()}" target="_blank" style="color:#666;font-size:12px;">길 찾기</a>` +
+                                   `</div>`;
+                 const infowindow = new kakao.maps.InfoWindow({ content : iwContent, removable : true });
+                 kakao.maps.event.addListener(marker, 'click', function() { infowindow.open(map, marker); });
 
-                kakao.maps.event.addListener(marker, 'click', function() {
-                    infowindow.open(map, marker);
-                });
-
-                 // 지도 타입 컨트롤, 줌 컨트롤 추가 (옵션)
-                const mapTypeControl = new kakao.maps.MapTypeControl();
-                map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
-                const zoomControl = new kakao.maps.ZoomControl();
-                map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
-
-                // 지도가 성공적으로 로드되었음을 표시
-                mapContainer.innerHTML = ''; // 로딩 메시지 제거
-                mapContainer.style.background = ''; // 배경 제거
-                map.relayout(); // 컨테이너 크기 변경 시 필요할 수 있음
-
-            }); // end kakao.maps.load
-        } catch (e) {
-            console.error("Kakao Maps SDK load error or initialization failed:", e);
-            const mapContainer = document.getElementById('map');
-            if(mapContainer) {
-                mapContainer.innerHTML = '<span>지도 로드 실패 (API 키 확인 필요)</span>';
-            }
-        }
+                 map.addControl(new kakao.maps.MapTypeControl(), kakao.maps.ControlPosition.TOPRIGHT);
+                 map.addControl(new kakao.maps.ZoomControl(), kakao.maps.ControlPosition.RIGHT);
+                 map.setDraggable(true); map.setZoomable(true);
+             });
+         } catch (e) {
+             console.error("Kakao Maps SDK load/init error:", e);
+             const mapLoadingDiv = document.getElementById('map-loading-indicator');
+             if(mapLoadingDiv) mapLoadingDiv.textContent = '지도를 불러오는데 실패했습니다.';
+         }
     </script>
-
 </body>
 </html>
