@@ -1,0 +1,4 @@
+1.file generarting
+2.add test.txt
+3 new file
+4.새로운 메모장
