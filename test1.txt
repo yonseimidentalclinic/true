@@ -1,3 +1,4 @@
 1. 재민난 깃 크라켄
 2. 넘 재미난 깃세상
- 
+3. hello git
+4.hello world 
