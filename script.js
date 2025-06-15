@@ -12,14 +12,14 @@ import {
     onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-auth.js";
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
     // 모바일 메뉴 토글 기능
     const menuButton = document.querySelector('.mobile-menu-toggle');
     const mainNav = document.querySelector('.main-nav');
 
     if (menuButton && mainNav) {
-        menuButton.addEventListener('click', function() {
+        menuButton.addEventListener('click', function () {
             mainNav.classList.toggle('active');
             const isExpanded = mainNav.classList.contains('active');
             menuButton.setAttribute('aria-expanded', isExpanded);
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (appointmentForm) {
         const privacyCheckbox = appointmentForm.querySelector('#privacy');
 
-        appointmentForm.addEventListener('submit', async function(event) {
+        appointmentForm.addEventListener('submit', async function (event) {
             event.preventDefault(); // 기본 제출 동작 우선 방지
 
             let isValid = true;
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
             try {
                 const firestoreDocRef = await addDoc(collection(db, "appointments"), appointmentData);
                 console.log("Document written to Firestore with ID: ", firestoreDocRef.id);
-                
+
                 // Realtime Database에 데이터 저장
                 const rtdbRef = ref(rtdb, 'appointments/' + firestoreDocRef.id);
                 await set(rtdbRef, appointmentData);
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // 개인정보 동의 체크 시 에러 스타일 동적 제거
         if (privacyCheckbox) {
-            privacyCheckbox.addEventListener('change', function() {
+            privacyCheckbox.addEventListener('change', function () {
                 if (this.checked) {
                     this.parentElement.classList.remove('error');
                 }
@@ -240,8 +240,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // 인증 상태 변경 감지 및 UI/페이지 이동 처리
     onAuthStateChanged(auth, (user) => {
         const isAuthPage = window.location.pathname.includes('auth.html');
-        // 루트 경로('/')도 index.html로 간주
-        const isIndexPage = window.location.pathname.endsWith('/') || window.location.pathname.endsWith('index.html') || window.location.pathname === '/';
 
 
         // 헤더 UI 요소 가져오기
@@ -282,7 +280,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (headerLoginRegisterLink) headerLoginRegisterLink.style.display = 'block';
 
             // auth.html 페이지에 있을 때만 로그인/회원가입 폼 표시
-           if (isAuthPage) {
+            if (isAuthPage) {
                 if (registerForm) registerForm.style.display = 'block';
                 if (loginForm) loginForm.style.display = 'block';
             }
