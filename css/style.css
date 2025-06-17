@@ -1,3 +1,14 @@
+#register-form input[type="text"],
+#register-form input[type="tel"],
+#register-form input[type="email"],
+#register-form input[type="password"],
+#login-form input[type="email"],
+#login-form input[type="password"] {
+  padding: 15px; /* 내부 여백을 늘립니다. */
+  font-size: 16px; /* 폰트 크기를 키웁니다. */
+  background-color: #e0f2f7; /* 입력칸 내부 배경색을 하늘색 계열로 변경 */
+  /* height: 50px; */ /* 또는 고정 높이를 설정할 수도 있습니다. */
+}
 /* ----- Reset & Basic Settings ----- */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
 
@@ -319,4 +330,9 @@ h1 { font-size: 2.8rem; } h2 { font-size: 2rem; } h3 { font-size: 1.5rem; } h4 {
     .footer-quicklinks ul { padding: 0; }
     .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
     .text-logo.footer-logo-text { margin: 0 auto 1rem; } /* Center footer logo */
+}
+
+/* ----- Auth Page Specific Styles ----- */
+.auth-section {
+  background-color: #fff0f5; /* 연한 분홍색 */
 }
