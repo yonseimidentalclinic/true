@@ -128,11 +128,22 @@ h1 { font-size: 2.8rem; } h2 { font-size: 2rem; } h3 { font-size: 1.5rem; } h4 {
 .text-center .section-title, .text-center .section-subtitle { margin-left: auto; margin-right: auto; }
 
 /* ----- Clinic Features (Index Page) ----- */
-.feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: calc(var(--spacing-unit) * 2); margin-top: calc(var(--spacing-unit) * 3); }
-.feature-item { text-align: center; padding: var(--spacing-unit); }
-.feature-icon { max-height: 60px; margin: 0 auto calc(var(--spacing-unit) * 1.5); border-radius: var(--border-radius); }
-.feature-item h3 { font-size: 1.25rem; font-weight: var(--font-weight-medium); margin-bottom: 0.5rem; }
-.feature-item p { font-size: 0.95rem; color: var(--color-text-muted); }
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px; /* 그리드 간격을 넓게 */
+    padding: 40px 0;
+}
+
+.feature-item {
+    text-align: center;
+}
+
+.feature-icon {
+    width: 100px;   /* 기존보다 더 크게 */
+    height: 100px;
+    margin-bottom: 20px;
+}
 
 /* ----- Major Services (Index Page) ----- */
 .service-card-deck { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: calc(var(--spacing-unit) * 2); }
