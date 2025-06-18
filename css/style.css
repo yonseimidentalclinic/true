@@ -73,7 +73,17 @@ h1 { font-size: 2.8rem; } h2 { font-size: 2rem; } h3 { font-size: 1.5rem; } h4 {
 .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-subtle); }
 .btn-primary { color: var(--color-white); background-color: var(--color-primary); border-color: var(--color-primary); }
 .btn-primary:hover { background-color: var(--color-primary-dark); border-color: var(--color-primary-dark); }
-.btn-secondary { color: var(--color-primary); background-color: transparent; border-color: var(--color-primary); }
+.btn-secondary {
+  color: var(--color-white);
+  background-color: #3F51B5;
+  border-color: #3F51B5;
+}
+} }
+.btn-secondary {
+  color: var(--color-primary);
+  background-color: #3F51B5;
+  border-color: var(--color-primary);
+}
 .btn-secondary:hover { color: var(--color-white); background-color: var(--color-primary); border-color: var(--color-primary); }
 .btn-outline { color: var(--color-secondary); border-color: var(--color-border); padding: 0.5rem 1rem; }
 .btn-outline:hover { color: var(--color-primary); border-color: var(--color-primary); background-color: rgba(72, 176, 171, 0.05); }
