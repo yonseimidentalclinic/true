@@ -128,7 +128,24 @@ h1 { font-size: 2.8rem; } h2 { font-size: 2rem; } h3 { font-size: 1.5rem; } h4 {
 .text-center .section-title, .text-center .section-subtitle { margin-left: auto; margin-right: auto; }
 
 /* ----- Clinic Features (Index Page) ----- */
+/* ...existing code... */
 .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px; /* 그리드 간격을 넓게 */
+    padding: 40px 0;
+}
+
+.feature-item {
+    text-align: center;
+}
+
+.feature-icon {
+    width: 100px;   /* 기존보다 더 크게 */
+    height: 100px;
+    margin-bottom: 20px;
+}
+/* ...existing code... */.feature-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px; /* 그리드 간격을 넓게 */
