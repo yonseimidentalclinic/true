@@ -130,36 +130,58 @@ h1 { font-size: 2.8rem; } h2 { font-size: 2rem; } h3 { font-size: 1.5rem; } h4 {
 /* ----- Clinic Features (Index Page) ----- */
 /* ...existing code... */
 .feature-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px; /* 그리드 간격을 넓게 */
-    padding: 40px 0;
+    display: flex;
+    gap: 40px; /* 칸 사이 간격을 더 넓게 */
+    justify-content: center;
+    align-items: stretch;
 }
 
 .feature-item {
+    flex: 1 1 250px; /* 최소 너비를 늘림 */
+    max-width: 320px; /* 최대 너비도 늘림 */
+    padding: 32px 24px; /* 패딩 증가 */
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
     text-align: center;
+    transition: transform 0.2s;
+}
+
+.feature-item:hover {
+    transform: translateY(-8px) scale(1.04);
 }
 
 .feature-icon {
-    width: 100px;   /* 기존보다 더 크게 */
-    height: 100px;
-    margin-bottom: 20px;
+    width: 96px;   /* 이미지 크기 증가 */
+    height: 96px;
+    margin-bottom: 24px;
 }
 /* ...existing code... */.feature-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px; /* 그리드 간격을 넓게 */
-    padding: 40px 0;
+    display: flex;
+    gap: 40px; /* 칸 사이 간격을 더 넓게 */
+    justify-content: center;
+    align-items: stretch;
 }
 
 .feature-item {
+    flex: 1 1 250px; /* 최소 너비를 늘림 */
+    max-width: 320px; /* 최대 너비도 늘림 */
+    padding: 32px 24px; /* 패딩 증가 */
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
     text-align: center;
+    transition: transform 0.2s;
+}
+
+.feature-item:hover {
+    transform: translateY(-8px) scale(1.04);
 }
 
 .feature-icon {
-    width: 100px;   /* 기존보다 더 크게 */
-    height: 100px;
-    margin-bottom: 20px;
+    width: 96px;   /* 이미지 크기 증가 */
+    height: 96px;
+    margin-bottom: 24px;
 }
 
 /* ----- Major Services (Index Page) ----- */
